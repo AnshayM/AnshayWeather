@@ -1,10 +1,8 @@
-package com.anshayweather.activity;
+package com.anshayweather;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.anshayweather.R;
 import com.anshayweather.db.City;
 import com.anshayweather.db.County;
 import com.anshayweather.db.Province;
@@ -84,26 +81,6 @@ public class ChooseAreaFragment extends Fragment {
                 } else if (currentLevel == LEVEL_CITY) {
                     selectedCity = cityList.get(position);
                     queryCunties();
-                } else if (currentLevel == LEVEL_COUNTY) {
-                    String weatherId = countyList.get(position).getWeatherId();
-                    //instaceof关键字可以判断某一个对象是否属于某个类的实例。
-                    //在碎片中调用getActivity()方法，然后配合instanceof关键字，判断该碎片是在哪个activity中。
-                    //如果在MainActivity中，跳转至WeatherActivity，销毁当前页面，
-                    // 如果是WeatherActivity中，那么久关闭滑动菜单，显示下拉刷新，然后请求新城市的天气信息
-                    if (getActivity() instanceof ChooseAreaActivity) {
-                        Intent intent = new Intent(getActivity(),WeatherActivity.class);
-                        intent.putExtra("weather_id", weatherId);
-                        startActivity(intent);
-                        getActivity().finish();
-                    } else if (getActivity() instanceof WeatherActivity) {
-                        Log.d("侧滑选择城市", weatherId);
-                        WeatherActivity activity = (WeatherActivity) getActivity();
-                        activity.drawerLayout.closeDrawers();
-                        activity.swipeRefresh.setRefreshing(true);
-                        activity.requestWeather(weatherId);
-                    }
-
-
                 }
             }
         });
@@ -182,20 +159,30 @@ public class ChooseAreaFragment extends Fragment {
     }
 
     //TODO 根据传入的地址和类型从服务器上查询省市数据
-    private void queryFromServer(String address, final String type) {
-        Log.d("调用了", "从服务器查询省城市数据方法");
+    private void queryFromServer(String address,final String type) {
         showProgressDialog();
         HttpUtil.sendOKHttpRequest(address, new Callback() {
             @Override
+            public void onFailure(Call call, IOException e) {
+                //通过runOnUIThread（）方法回到主线程处理逻辑
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        closeProgressDialog();
+                        Toast.makeText(getContext(), "加载失败", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String responseText = response.body().string();
-                Log.d("返回结果", responseText);
                 boolean result = false;
                 //如果是省
                 if ("province".equals(type)) {
                     result = Utility.handleProvinceResponse(responseText);
                 } else if ("city".equals(type)) {
-                    result = Utility.handleCityResponse(responseText, selectedProvince.getId());
+                    result = Utility.handleCityResponse(responseText,selectedProvince.getId());
                 } else if ("county".equals(type)) {
                     result = Utility.handleCountyResponse(responseText, selectedCity.getId());
                 }
@@ -215,24 +202,11 @@ public class ChooseAreaFragment extends Fragment {
                     });
                 }
             }
-
-            @Override
-            public void onFailure(Call call, IOException e) {
-                //通过runOnUIThread（）方法回到主线程处理逻辑
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        closeProgressDialog();
-                        Toast.makeText(getContext(), "加载失败", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
         });
     }
 
     /*显示进度对话框*/
-    private void showProgressDialog() {
-        Log.d("调用了", "dialog方法");
+    private void closeProgressDialog() {
         if (progressDialog == null) {
             progressDialog = new ProgressDialog(getActivity());
             progressDialog.setMessage("正在加载...");
@@ -242,15 +216,11 @@ public class ChooseAreaFragment extends Fragment {
     }
 
     /*关闭进度对话框*/
-    private void closeProgressDialog() {
-        Log.d("调用了", "关闭dialog方法");
+    private void showProgressDialog() {
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
     }
-/*添加过的地方才会有本地保存，不然就会调用网络请求。
-bug：1没有网络可用就toast加载失败，但是顶部标题还是会显示下一级名字和返回键，返回键不可点击，中间listView页面却不变化。
-     2view的可持续使用，每次都重新生成比较浪费资源。
-*/
+
 }
 

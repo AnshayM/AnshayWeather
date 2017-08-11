@@ -6,6 +6,8 @@ import android.util.Log;
 import com.anshayweather.db.City;
 import com.anshayweather.db.County;
 import com.anshayweather.db.Province;
+import com.anshayweather.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,6 +42,7 @@ public class Utility {
 
     public static boolean handleCityResponse(String response,int provinceId){
         /*解析和处理服务器返回的城市数据*/
+        Log.d("调用了", "解析市级数据的方法");
         if (!TextUtils.isEmpty(response)) {
             try {
                 JSONArray allCities = new JSONArray(response);
@@ -61,6 +64,8 @@ public class Utility {
 
     public static boolean handleCountyResponse(String response,int cityId){
         /*解析和处理服务器返回的县级数据*/
+        Log.d("调用了", "解析县级数据的方法");
+
         if (!TextUtils.isEmpty(response)) {
             try {
                 JSONArray allCounties = new JSONArray(response);
@@ -79,4 +84,22 @@ public class Utility {
         }
         return false;
     }
+
+
+    /**
+     * 将返回的JSON数据解析成Weather实体类
+     */
+    public static Weather handleWeatherResponse(String response) {
+        Log.d("调用了", "解析天气数据的方法");
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("HeWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
