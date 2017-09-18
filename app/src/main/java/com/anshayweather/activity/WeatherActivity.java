@@ -58,6 +58,10 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
     public DrawerLayout drawerLayout;
     public SharedPreferences prefs;
 
+    private String myUrl = "https://free-api.heweather.com/v5/";//接口网址
+    public String myKey = "7d600ab4df3d4cad89141901a36dd7e4";//我的私钥
+    public String guoKey = "bc0418b57b2d4918819d3974ac1285d9";//郭大神的私钥
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,7 +153,7 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
      */
     public void requestWeather(final String weatherId) {
         Log.d("请求天气数据，拿到的weatherId：", weatherId);
-        String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key=7d600ab4df3d4cad89141901a36dd7e4";
+        String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key="+guoKey;
         HttpUtil.sendOKHttpRequest(weatherUrl, new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
@@ -207,7 +211,6 @@ public class WeatherActivity extends AppCompatActivity implements View.OnClickLi
         titleUpdateTime.setText(updateTime);
         degreeText.setText(degree);
         weatherInfoText.setText(weatherInfo);
-
         forecastLayout.removeAllViews();
         for (Forecast forecast : weather.forecastList) {
             View view = LayoutInflater.from(this).inflate(R.layout.forecast_item, forecastLayout, false);
