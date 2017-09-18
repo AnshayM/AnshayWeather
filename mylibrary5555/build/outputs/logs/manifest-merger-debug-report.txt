@@ -1,0 +1,101 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:1:1-10:12
+	package
+		ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:3:5-35
+	android:versionName
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+application
+ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:5:5-8:19
+MERGED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:13:5-33:19
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\8276ea793eedd8bc80bf2ffb58fef8bb727aa8a1\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\d645d0675697992203f589b7c142eb423eafae9f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\01ef076ff7561454d1684fc50c2c3d37750e02c7\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\14759b45883759af4b5bdbe0c3e43d5605e03af0\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\11164d740d3a9ee080b9a346709b0cee93c7d06e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\54fa8179bd094203eb535a27ef49a9b294f4a91f\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\0f640a05d4d345c51c7b7fdd5dae724e3a643529\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\10edcf40a6b45359b0db202b0714d0a62152cc10\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\43354e872fddba05590bf8b83325fdbd1eb7b667\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anshay\.android\build-cache\ba714e195f46a8c8d6d647510250005f56372d52\output\AndroidManifest.xml:9:5-20
+MERGED from [org.litepal.android:core:1.5.1] C:\Users\Anshay\.android\build-cache\c22c2913b2e686d446b6cb826e0ff0658f95458e\output\AndroidManifest.xml:11:5-14:19
+MERGED from [com.gaoneng.library:autoscrollbacklayout:1.1.1] C:\Users\Anshay\.android\build-cache\b18869e891ce93f77723c109938ba35daa3e1d1a\output\AndroidManifest.xml:11:5-20
+	android:label
+		ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:5:45-77
+	android:supportsRtl
+		ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:6:9-35
+	android:roundIcon
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:16:9-54
+	android:allowBackup
+		ADDED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml:5:18-44
+	android:theme
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:18:9-40
+	android:name
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:14:9-54
+uses-sdk
+INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\8276ea793eedd8bc80bf2ffb58fef8bb727aa8a1\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\d645d0675697992203f589b7c142eb423eafae9f\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\01ef076ff7561454d1684fc50c2c3d37750e02c7\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\14759b45883759af4b5bdbe0c3e43d5605e03af0\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\11164d740d3a9ee080b9a346709b0cee93c7d06e\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\54fa8179bd094203eb535a27ef49a9b294f4a91f\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\0f640a05d4d345c51c7b7fdd5dae724e3a643529\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\10edcf40a6b45359b0db202b0714d0a62152cc10\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\43354e872fddba05590bf8b83325fdbd1eb7b667\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Anshay\.android\build-cache\ba714e195f46a8c8d6d647510250005f56372d52\output\AndroidManifest.xml:5:5-7:41
+MERGED from [org.litepal.android:core:1.5.1] C:\Users\Anshay\.android\build-cache\c22c2913b2e686d446b6cb826e0ff0658f95458e\output\AndroidManifest.xml:7:5-9:41
+MERGED from [com.gaoneng.library:autoscrollbacklayout:1.1.1] C:\Users\Anshay\.android\build-cache\b18869e891ce93f77723c109938ba35daa3e1d1a\output\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\8276ea793eedd8bc80bf2ffb58fef8bb727aa8a1\output\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+		INJECTED from E:\workspace\AnshayWeather\mylibrary5555\src\main\AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:9:22-64
+activity#com.anshayweather.activity.WellcomeActivity
+ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:19:19-77
+activity#com.anshayweather.activity.WeatherActivity
+ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:26:9-79
+	android:name
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:26:19-76
+activity#com.anshayweather.activity.ChooseAreaActivity
+ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:27:9-82
+	android:name
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:27:19-79
+service#com.anshayweather.service.AutoUpdateService
+ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:29:9-32:39
+	android:enabled
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:32:13-36
+	android:name
+		ADDED from [AnshayWeather:app:unspecified] E:\workspace\AnshayWeather\app\build\intermediates\bundles\default\AndroidManifest.xml:30:13-71
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\8276ea793eedd8bc80bf2ffb58fef8bb727aa8a1\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\d645d0675697992203f589b7c142eb423eafae9f\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\01ef076ff7561454d1684fc50c2c3d37750e02c7\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\14759b45883759af4b5bdbe0c3e43d5605e03af0\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\11164d740d3a9ee080b9a346709b0cee93c7d06e\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\54fa8179bd094203eb535a27ef49a9b294f4a91f\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\0f640a05d4d345c51c7b7fdd5dae724e3a643529\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\10edcf40a6b45359b0db202b0714d0a62152cc10\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\43354e872fddba05590bf8b83325fdbd1eb7b667\output\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\8276ea793eedd8bc80bf2ffb58fef8bb727aa8a1\output\AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Anshay\.android\build-cache\8276ea793eedd8bc80bf2ffb58fef8bb727aa8a1\output\AndroidManifest.xml:26:9-47

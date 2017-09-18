@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\workspace\\AnshayWeather\\mylibrary5555\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
+        "source": "E:\\workspace\\AnshayWeather\\app\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\workspace\\AnshayWeather\\mylibrary5555\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4\\ic_launcher_round.png",
+        "source": "E:\\workspace\\AnshayWeather\\app\\build\\intermediates\\bundles\\default\\res\\mipmap-xxhdpi-v4\\ic_launcher_round.png"
+    }
+]
