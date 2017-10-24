@@ -6,4 +6,4 @@
 待加功能:保存选择过的城市，第一次安装和进入通过位置查询到所在城市直接显示所在城市天气信息。左右滑动选择保存过的城市天气。根据天气信息自动选择背景图片（考虑）等。
 
 
-         ![我的头像](https://github.com/AnshayM/AnshayWeather/blob/master/AnshayWeather.gif)
+![我的头像](https://github.com/AnshayM/AnshayWeather/blob/master/AnshayWeather.gif)
